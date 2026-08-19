@@ -83,8 +83,7 @@ But in gradient when we calculate dw we haev enourmous time benifit coz we have 
 dl_di cacluation become bit chalenging and it took me 3 days to figure out in most case it ended up with nested loop again 
 so i decided to add padding and rotate kernel to 180 to calculate full convolution 
 
-## Pytorch won hehehe
-
+## Pytorch is better hehehe
 # Thank You 
                       
                                                       
