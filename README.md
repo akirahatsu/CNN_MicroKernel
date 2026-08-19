@@ -4,3 +4,9 @@ CNN_MicroKernel - is a minimal, dependency-free deep learning library built enti
 * **Zero External Dependencies:** Built strictly using pure Python and NumPy.
 * **Explicit Mechanics:** Standard 2D convolutions, spatial patching, and gradient updates without abstract C++ extensions.
 * **CPU-Native Execution:** Designed for lightweight research environments, embedded systems, and algorithmic prototyping.
+
+#Time Comparison 
+
+
+
+# Story Backend
