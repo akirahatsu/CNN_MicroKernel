@@ -74,7 +74,7 @@ I know it does not look comthing fancy but i noticed that instead running trough
 kernel elements but one this is hold we have to cut a few parts based on kernel shape 
 
 
-* ** It is Ai generated image explonation of my code but even myself didn't underestand
+* **  It is Ai generated image explonation of my code but even myself didn't underestand
 
 
 <img src="img_cnn.png" width="700">
