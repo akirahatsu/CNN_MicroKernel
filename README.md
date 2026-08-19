@@ -8,7 +8,7 @@ CNN_MicroKernel - is a minimal, dependency-free deep learning library built enti
 # Time Comparison 
 
 
-* ** CNN_Microkernel
+* **CNN_Microkernel
           
                     CNN_MicroKernel
                     --------------------------------
@@ -20,7 +20,7 @@ CNN_MicroKernel - is a minimal, dependency-free deep learning library built enti
                     Average     : 0.13139847712012853 seconds
                     Minimum     : 0.11924026500128093 seconds
   
-* ** CNN Nested loop verion ( 5 itteration )
+* **CNN Nested loop verion ( 5 itteration )
   
                     CNN Nested loop version
                     --------------------------------
@@ -33,7 +33,7 @@ CNN_MicroKernel - is a minimal, dependency-free deep learning library built enti
                     Minimum     : 32.83425570300096 seconds
 
 
-* ** Torch CPU environment
+* **Torch CPU environment
 
                     PyTorch CPU
                     --------------------------------
@@ -45,7 +45,7 @@ CNN_MicroKernel - is a minimal, dependency-free deep learning library built enti
                     Minimum     : 0.018372706999798538 seconds
 
 
-* ** Torch Cuda environment
+* **Torch Cuda environment
   
                     PyTorch CUDA
                     --------------------------------
@@ -74,7 +74,7 @@ I know it does not look comthing fancy but i noticed that instead running trough
 kernel elements but one this is hold we have to cut a few parts based on kernel shape 
 
 
-* **  It is Ai generated image explonation of my code but even myself didn't underestand
+* **It is Ai generated image explonation of my code but even myself didn't underestand
 
 
 <img src="img_cnn.png" width="700">
@@ -105,7 +105,7 @@ so i decided to add padding and rotate kernel to 180 to calculate full convoluti
                       # print(a[el] == np.rot90(np.rot90(input , k= el-1)[:-1,:-1] ,k=-(el-1) ))
                       print(a[el] == np.rot90(np.rot90(input , k= el+1)[:-1,:-1] ,k=-(el+1) ))
 
-* ** simpler i want to cut side and save this hard code index and want to rotate input with and cut wiht same index
+* **Simpler i want to cut side and save this hard code index and want to rotate input with and cut wiht same index
 
 
 # Thank You 
