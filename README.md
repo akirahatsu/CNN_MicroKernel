@@ -83,30 +83,7 @@ But in gradient when we calculate dw we haev enourmous time benifit coz we have 
 dl_di cacluation become bit chalenging and it took me 3 days to figure out in most case it ended up with nested loop again 
 so i decided to add padding and rotate kernel to 180 to calculate full convolution 
 
-# UPGRADE I WANT TO MAKE IN FUTURE 
-
-                    a = [input[:-2, :-2] , input[:-2, 1:-1] , input[:-2, 2:]  ,
-                         input[1:-1, :-2] ,input[1:-1, 1:-1] , input[1:-1, 2:] ,
-                         input[2:, :-2] ,input[2:, 1:-1] ,input[2:, 2:]]
-                    
-                    
-                    for el in range(len(a)):
-                      # print(a[el] == np.rot90(np.rot90(input , k= el)[:-2, :-2],k=-(el) ))
-                      # print(a[el] == np.rot90(np.rot90(input , k= el+2)[:-2, :-2] ,k=-(el+2) ))
-                      print(a[el] == np.rot90(np.rot90(input , k= el-3)[:-2,:-2] ,k=-(el-3) ))
-                    
-                      # hard_patch = lambda input : np.array([input[:-1,:-1],input[:-1 , 1:] ,input[1:,:-1],input[1:,1:]])
-                    
-                    # hard_patch(input)
-                    a = [input[:-1,:-1],input[:-1 , 1:] ,input[1:,:-1],input[1:,1:]]
-                    
-                    for el in range(len(a)):
-                      # print(a[el] == np.rot90(np.rot90(input , k= el)[:-1,:-1] ,k=-(el) ))
-                      # print(a[el] == np.rot90(np.rot90(input , k= el-1)[:-1,:-1] ,k=-(el-1) ))
-                      print(a[el] == np.rot90(np.rot90(input , k= el+1)[:-1,:-1] ,k=-(el+1) ))
-
-* Simpler i want to cut side and save this hard code index and want to rotate input with and cut wiht same index
-
+## Pytorch won hehehe
 
 # Thank You 
                       
