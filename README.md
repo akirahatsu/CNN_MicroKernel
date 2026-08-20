@@ -1,7 +1,7 @@
 # CNN_MicroKernel CPU-Optimized-NumPy-Engine-for-Accelerated-Neural-Operators
 
 ## WHY I MADE THIS AT ALL 
-* Main reason was i made Deep learnig from scratch and i layers were need CNN and i hard coded
+* Main reason was i made Deep learnig from scratch and inside layers were need CNN and i hard coded
 CNN with nested loop and it was pretty slow so there was only way to use pytorch instead
 but it was cheating myself so i decided to findout costom made CNN whishas to be fast and works on CPU
 and it tooksme  5 - 6 days and i got aproximitly 200x-300x faster costom made CNN Microkernel
