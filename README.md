@@ -93,8 +93,43 @@ kernel elements but one this is hold we have to cut a few parts based on kernel 
 But in gradient when we calculate dw we haev enourmous time benifit coz we have to call what is in it __init__
 dl_di cacluation become bit chalenging and it took me 3 days to figure out in most case it ended up with nested loop again 
 so i decided to add padding and rotate kernel to 180 to calculate full convolution 
+## Quick Update  i decided to use np.einsum here is results
 
-## Pytorch is better hehehe
+                              CNN_MicroKernel
+                              --------------------------------
+                              Device      : CPU
+                              Input shape : (1, 1, 442, 354)
+                              Kernel      : (3, 3)
+                              N kernels   : 10
+                              Runs        : 50
+                              Average     : 0.11487979011995776 seconds
+                              Minimum     : 0.08341980499972124 seconds
+
+* Notice that for np.einsum version we have to deal with dimentions coz prev were deal with 2D
+
+                                 if self.kernel_size[0] == 2:
+                                    self.hard_patch = lambda x: np.stack([
+                                              x[..., :-1, :-1], x[..., :-1, 1:],
+                                              x[..., 1:, :-1],  x[..., 1:, 1:]
+                                          ], axis=2)
+                                    # self.hard_patch = lambda input: np.array([
+                                    #                          input[:-1, :-1], input[:-1, 1:], 
+                                    #                          input[1:, :-1], input[1:, 1:]
+                                    #                      ])
+                                  elif self.kernel_size[0] == 3:
+                              
+                                    self.hard_patch = lambda x: np.stack([
+                                              x[..., :-2, :-2], x[..., :-2, 1:-1], x[..., :-2, 2:],
+                                              x[..., 1:-1, :-2], x[..., 1:-1, 1:-1], x[..., 1:-1, 2:],
+                                              x[..., 2:, :-2],  x[..., 2:, 1:-1],  x[..., 2:, 2:]
+                                          ], axis=2)
+                                    
+                                    # self.hard_patch = lambda input : np.array([input[:-2, :-2] , input[:-2, 1:-1] , input[:-2, 2:]  ,
+                                    #                             input[1:-1, :-2] ,input[1:-1, 1:-1] , input[1:-1, 2:] ,
+                                    #                             input[2:, :-2] ,input[2:, 1:-1] ,input[2:, 2:]])
+
+  
+## Still Pytorch is better hehehe
 # Thank You 
                       
                                                       
