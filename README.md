@@ -7,7 +7,7 @@ but it was cheating myself so i decided to findout costom made CNN whishas to be
 and it tooksme  5 - 6 days and i got aproximitly 200x-300x faster costom made CNN Microkernel
 
 
-<img src="screenshot.png" width="700">
+<img src="Screenshot.png" width="700">
 
 
 CNN_MicroKernel - is a minimal, dependency-free deep learning library built entirely on NumPy. It implements fundamental convolutional layers, forward passes, and backpropagation mechanics optimized strictly for CPU execution.
